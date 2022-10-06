@@ -36,6 +36,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-explicit-any': ['off'],
+    'vue/multi-word-component-names': 0,
   },
   overrides: [
     {
@@ -47,6 +48,6 @@ module.exports = {
   ],
   globals: {
     defineProps: 'readonly',
-    defineEmits: 'readonly'
+    defineEmits: 'readonly',
   },
 }

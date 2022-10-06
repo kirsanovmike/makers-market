@@ -1,19 +1,9 @@
 import { createStore } from 'vuex'
 
 export default createStore({
-  state: {
-    test: 1,
-  },
-  getters: {
-    getTest(state) {
-      return state.test
-    },
-  },
-  mutations: {
-    addTest(state) {
-      ++state.test
-    },
-  },
+  state: {},
+  getters: {},
+  mutations: {},
   actions: {},
   modules: {},
 })
