@@ -1,7 +1,1 @@
-import { App } from 'vue'
-
-export default {
-  install(app: App) {
-    // plugins
-  },
-}
+export { default as vuetify } from './vuetify';

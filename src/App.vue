@@ -1,13 +1,33 @@
-<script setup lang="ts">
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-</script>
-
 <template>
-  <router-view />
+  <v-app>
+    <v-navigation-drawer app>
+      <v-btn @click="toggleTheme">toggle theme</v-btn>
+    </v-navigation-drawer>
+
+    <v-app-bar app> app </v-app-bar>
+
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
+
+<script setup lang="ts">
+import { useTheme } from "vuetify";
+
+const theme = useTheme();
+
+function toggleTheme() {
+  theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
+}
+</script>
 
 <style>
 #app {
-  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
