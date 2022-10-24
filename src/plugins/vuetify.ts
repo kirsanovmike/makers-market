@@ -41,8 +41,8 @@ const vuetify: Object = createVuetify({
   theme: {
     defaultTheme: "myCustomLightTheme",
     themes: {
-      myCustomLightTheme,
-      myCustomDarkTheme,
+      light: {...myCustomLightTheme},
+      dark: {...myCustomDarkTheme},
     },
   },
 });

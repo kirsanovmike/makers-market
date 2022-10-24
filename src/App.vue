@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer app>
-      <v-btn @click="toggleTheme">toggle theme</v-btn>
+      <v-btn class="primary" @click="toggleTheme">toggle theme</v-btn>
     </v-navigation-drawer>
 
     <v-app-bar app> app </v-app-bar>
@@ -12,14 +12,16 @@
   </v-app>
 </template>
 
-<script setup lang="ts">
-import { useTheme } from "vuetify";
+<script lang="ts">
+import { defineComponent } from "vue";
 
-const theme = useTheme();
-
-function toggleTheme() {
-  theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
-}
+export default defineComponent({
+  methods: {
+    toggleTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    },
+  },
+});
 </script>
 
 <style>
