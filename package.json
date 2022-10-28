@@ -1,31 +1,22 @@
 {
-  "name": "vite-ts-vue3-template",
-  "version": "0.0.0",
+  "name": "makers-market",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview",
-    "lint": "eslint --ext .js,.vue src"
+    "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.16",
-    "vue-router": "^4.0.12",
-    "vuex": "^4.0.2"
+    "vue": "^3.2.26",
+    "vuetify": "npm:@vuetify/nightly@3.0.0-next-20220107.0"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "@typescript-eslint/parser": "^5.7.0",
     "@vitejs/plugin-vue": "^2.0.1",
-    "@vue/eslint-config-typescript": "^10.0.0",
-    "eslint": "^8.5.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.2.0",
-    "less": "^4.1.2",
-    "prettier": "^2.5.1",
+    "@vuetify/vite-plugin": "^1.0.0-alpha.10",
+    "fs.promises": "^0.1.2",
+    "sass": "^1.46.0",
     "typescript": "^4.5.4",
-    "vite": "^2.7.3",
-    "vue-tsc": "^0.40.13"
+    "vite": "2.7.10",
+    "vue-tsc": "^0.30.2"
   }
 }
