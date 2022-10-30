@@ -16,7 +16,7 @@ const myCustomDarkTheme: ThemeDefinition = {
   colors: dark,
 };
 
-const vuetify: Object = createVuetify({
+const vuetify: any = createVuetify({
   components,
   directives,
   theme: {
