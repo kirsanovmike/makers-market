@@ -21,6 +21,7 @@ const vuetify: any = createVuetify({
   directives,
   theme: {
     defaultTheme: "myCustomLightTheme",
+    dark: false,
     // defaultTheme: "myCustomDarkTheme",
     themes: {
       light: { ...myCustomLightTheme },
