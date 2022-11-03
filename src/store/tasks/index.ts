@@ -12,7 +12,7 @@ export const state: ProfileState = {
 
 const namespaced: boolean = true;
 
-export const profile: Module<ProfileState, RootState> = {
+export const tasks: Module<ProfileState, RootState> = {
   namespaced,
   state,
   getters,
