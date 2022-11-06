@@ -2,6 +2,10 @@ import { MutationTree } from "vuex";
 import { ProfileState, Task } from "./types";
 
 export const mutations: MutationTree<ProfileState> = {
+  /* Setting tasks. */
+  SET_TASKS_DATA(state, newTasks: Array<Task>) {
+    state.tasks = [...newTasks];
+  },
   /* Add tasks to task list. */
   ADD_TASK(state, payload: Task) {
     state.tasks?.push(payload);

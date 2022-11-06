@@ -1,11 +1,12 @@
 import { ActionTree } from "vuex";
 import { ProfileState, SettingPayload, Task } from "./types";
 import { RootState } from "../types";
+import { setLocalStorageItem } from "../../services/common/app-storage";
 
 export const actions: ActionTree<ProfileState, RootState> = {
-  /* Main setting action. */
-  setData({ commit }, payload: SettingPayload): any {
-    commit("SET_DATA", payload);
+  /* Setting tasks. */
+  setTasksData({ commit }, payload: SettingPayload): any {
+    commit("SET_TASKS_DATA", payload);
   },
   /* Add task. */
   addTask({ commit }, task: Task) {
@@ -18,5 +19,9 @@ export const actions: ActionTree<ProfileState, RootState> = {
   /* Clear all tasks. */
   clearTasks({ commit }) {
     commit("CLEAR_TASKS");
+  },
+  /* Update LoaclStorage Tasks List. */
+  updateLocalStorageTasksList({ state }) {
+    setLocalStorageItem("tasksList", state.tasks);
   },
 };
