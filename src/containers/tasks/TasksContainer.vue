@@ -4,9 +4,7 @@
     You have: {{ tasks.length }} tasks
     <div class="d-flex">
       <v-responsive class="mx-auto" max-width="344">
-        <pre>
-          {{ newTask }}
-        </pre>
+        {{ newTask }}
         <v-text-field
           v-model="newTask"
           clearable
