@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer app>
-      <v-btn class="primary" @click="toggleTheme">toggle theme</v-btn>
+      <navigation-draver-theme-switch />
     </v-navigation-drawer>
 
     <v-app-bar app height="100">
@@ -9,29 +9,22 @@
     </v-app-bar>
 
     <v-main>
-      <router-view />
-      {{ $vuetify.theme.themes }}
-      <div class="text-primary-lighten-1">text color</div>
-
-      <div class="text-primary-darken-1">text color</div>
-
-      <div class="text-primary-darken-2">text color</div>
+      <tasks-container />
+      <!-- <router-view /> -->
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+// layout components
 import MmAppBarHeader from "./components/AppBar/MmAppBarHeader.vue";
+import NavigationDraverThemeSwitch from "./components/NavigationDrawer/NavigationDraverThemeSwitch.vue";
+// containers
+import TasksContainer from "./containers/tasks/TasksContainer.vue";
 
 export default defineComponent({
-  components: { MmAppBarHeader },
-  methods: {
-    /* Refresh the theme. */
-    toggleTheme() {
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-    },
-  },
+  components: { MmAppBarHeader, NavigationDraverThemeSwitch, TasksContainer },
 });
 </script>
 
