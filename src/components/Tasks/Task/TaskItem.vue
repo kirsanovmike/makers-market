@@ -5,7 +5,7 @@
         Date: {{ item.createTime }}
       </p>
       <p class="primary--text text-body-1 mb-0 ml-8">
-        Task: {{ item.text }}
+        {{ item.text }}
       </p>
     </div>
     <v-btn class="ml-2" color="primary" @click="deleteItem"> Delete </v-btn>
