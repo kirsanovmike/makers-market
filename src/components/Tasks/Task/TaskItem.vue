@@ -1,11 +1,14 @@
 <template>
   <div class="d-flex align-center justify-space-between task-item">
-    <p class="info--text text-body-1 mb-0">
-      {{ item.text }}
-    </p>
-    <v-btn class="ml-2" color="primary" @click="deleteItem">
-      Delete
-    </v-btn>
+    <div class="d-flex">
+      <p class="info--text text-body-1 mb-0">
+        Date: {{ item.createTime }}
+      </p>
+      <p class="primary--text text-body-1 mb-0 ml-8">
+        {{ item.text }}
+      </p>
+    </div>
+    <v-btn class="ml-2" color="primary" @click="deleteItem"> Delete </v-btn>
   </div>
 </template>
 

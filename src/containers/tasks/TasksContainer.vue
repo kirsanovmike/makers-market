@@ -2,27 +2,29 @@
   <v-container class="px-8 py-12" fluid>
     <h1>Task manager</h1>
     You have: {{ tasks.length }} tasks
-    <div class="d-flex">
-      <v-responsive class="mx-auto" max-width="344">
-        {{ newTask }}
-        <v-text-field
-          v-model="newTask"
-          clearable
-          variant="outlined"
-          hide-details="auto"
-          label="New task"
-          @keyup.enter="addNewTask"
-        >
-          <template #append>
-            <v-btn
-              :disabled="newTask === '' || newTask == null"
-              variant="contained"
-              color="primary"
-            >
-              <span class="info--text" @click="addNewTask"> Add </span>
-            </v-btn>
-          </template>
-        </v-text-field>
+    <div class="d-flex pt-8">
+      <v-responsive class="mx-auto" max-width="394">
+        <div class="d-flex align-start">
+          <v-text-field
+            v-model="newTask"
+            clearable
+            class="task-text-field"
+            variant="outlined"
+            placeholder="New task"
+            label="New task"
+            @keyup.enter="addNewTask"
+          />
+          <v-btn
+            :disabled="newTask === '' || newTask == null"
+            class="ml-2"
+            :height="56"
+            variant="contained"
+            color="primary"
+            @click="addNewTask"
+          >
+            <span class="info--text"> Add </span>
+          </v-btn>
+        </div>
       </v-responsive>
     </div>
     <div
@@ -101,3 +103,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss">
+.task-text-field .v-field__field .v-field__input {
+  width: 260px;
+}
+</style>
